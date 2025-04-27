@@ -19,7 +19,7 @@ namespace API.Controllers
 
         [HttpGet("{id}")]
         [Authorize(PermissionEnum.UserManage)]
-        public Task<UserModel> GetUserById(int id, CancellationToken cancellationToken)
+        public Task<UserModel> GetUserById(int id , CancellationToken cancellationToken)
         {
             return _mediator.Send(new GetUserByIdQuery
             {
